@@ -211,9 +211,8 @@ function send() {
     var email = $("input[name=email]").val();
     var phone = $("input[name=phone]").val();
     var message = $("textarea[name=message]").val();
-    var body = message + '%0D%0A' +
-               '%0D%0AName: ' + name + 
-               '%0D%0ASurname: ' + surname + 
+    var body = message + '%0D%0A%0D%0A' + 
+               name + ' ' + surname + 
                '%0D%0AE-mail: ' + email;
     body += phone.length > 0 ? '%0D%0APhone: ' + phone : '';
     window.open("mailto:karazhev@gmail.com?subject=" + subject + "&body=" + body);
