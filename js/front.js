@@ -1,16 +1,12 @@
 $(function () {
-
     /* =========================================
      * tooltip
      *  =======================================*/
-
     $('.customer img').tooltip();
-
 
     /* =========================================
      * counters
      *  =======================================*/
-
     $('.counter').counterUp({
         delay: 10,
         time: 1000
@@ -19,7 +15,6 @@ $(function () {
     /* =================================================
      * Preventing URL update on navigation link click
      *  ==============================================*/
-
     $('.link-scroll').on('click', function (e) {
         var anchor = $(this);
         $('html, body').stop().animate({
@@ -28,21 +23,17 @@ $(function () {
         e.preventDefault();
     });
 
-
     /* =========================================
      *  Scroll Spy
      *  =======================================*/
-
     $('body').scrollspy({
         target: '#navbarcollapse',
         offset: 80
     });
 
-
     /* =========================================
      * testimonial slider
      *  =======================================*/
-
     $(".testimonials").owlCarousel({
         nav: false,
         dots: true,
@@ -62,21 +53,17 @@ $(function () {
             }
         }
     });
-
-
+    
     /* =========================================
      * Leflet map
      *  =======================================*/
     map();
 
-
     /* =========================================
      * parallax
      *  =======================================*/
     $(window).scroll(function () {
-
         var scroll = $(this).scrollTop();
-
         if ($(window).width() > 1250) {
             $('.parallax').css({
                 'background-position': 'left -' + scroll / 8 + 'px'
@@ -91,7 +78,6 @@ $(function () {
     /* =========================================
      * filter
      *  =======================================*/
-
     $('#filter a').click(function (e) {
         e.preventDefault();
 
@@ -99,24 +85,19 @@ $(function () {
         $(this).parent('li').addClass('active');
 
         var categoryToFilter = $(this).attr('data-filter');
-
         $('.reference-item').each(function () {
-
             if ($(this).data('category') === categoryToFilter || categoryToFilter === 'all') {
                 $(this).show();
             } else {
                 $(this).hide();
             }
         });
-
     });
-
 
     /* =========================================
      * reference functionality
      *  =======================================*/
     $('.reference a').on('click', function (e) {
-
         e.preventDefault();
 
         var title = $(this).find('.reference-title').text(),
@@ -136,13 +117,11 @@ $(function () {
         }
 
         openReference(sliderContent);
-
     });
 
     function openReference(sliderContent) {
         $('#detail').slideDown();
         $('#references-masonry').slideUp();
-
 
         if (sliderContent !== '') {
 
@@ -162,7 +141,6 @@ $(function () {
         }
     }
 
-
     function closeReference() {
         $('#references-masonry').slideDown();
         $('#detail').slideUp();
@@ -172,27 +150,20 @@ $(function () {
         closeReference();
     });
 
-
     /* =========================================
      *  animations
      *  =======================================*/
-
     delayTime = 0;
-
     $('[data-animate]').waypoint(function (direction) {
         delayTime += 250;
-
         var element = $(this.element);
-
         $(this.element).delay(delayTime).queue(function (next) {
             element.toggleClass('animated');
             element.toggleClass(element.data('animate'));
             delayTime = 0;
             next();
         });
-
         this.destroy();
-
     }, {
         offset: '90%'
     });
@@ -212,67 +183,62 @@ $(function () {
     /* =========================================
      * for demo purpose
      *  =======================================*/
-
     var stylesheet = $('link#theme-stylesheet');
     $("<link id='new-stylesheet' rel='stylesheet'>").insertAfter(stylesheet);
     var alternateColour = $('link#new-stylesheet');
-
     if ($.cookie("theme_csspath")) {
         alternateColour.attr("href", $.cookie("theme_csspath"));
     }
 
     $("#colour").change(function () {
-
         if ($(this).val() !== '') {
-
             var theme_csspath = 'css/style.' + $(this).val() + '.css';
-
             alternateColour.attr("href", theme_csspath);
-
             $.cookie("theme_csspath", theme_csspath, {
                 expires: 365,
                 path: document.URL.substr(0, document.URL.lastIndexOf('/'))
             });
-
         }
 
         return false;
     });
-
 });
 
-
+function send() {
+    var subject = 'Message from the web site';
+    var name = $("input[name=name]").val();
+    var surname = $("input[name=surname]").val();
+    var email = $("input[name=email]").val();
+    var phone = $("input[name=phone]").val();
+    var message = $("textarea[name=message]").val();
+    var body = message + '%0D%0A' +
+               '%0D%0AName: ' + name + 
+               '%0D%0ASurname: ' + surname + 
+               '%0D%0AE-mail: ' + email;
+    body += phone.length > 0 ? '%0D%0APhone: ' + phone : '';
+    window.open("mailto:karazhev@gmail.com?subject=" + subject + "&body=" + body);
+}
 
 /* =========================================
  * styled Leaflet Map
  *  =======================================*/
-// ------------------------------------------------------ //
-// styled Leaflet  Map
-// ------------------------------------------------------ //
-
 function map() {
-
     var mapId = 'map',
         mapCenter = [53.87143507519677, 27.555582045711407],
         mapMarker = true;
-
     if ($('#' + mapId).length > 0) {
-
         var icon = L.icon({
             iconUrl: 'img/marker.png',
             iconSize: [25, 37.5],
             popupAnchor: [0, -18],
             tooltipAnchor: [0, 19]
         });
-
         var dragging = false,
             tap = false;
-
         if ($(window).width() > 700) {
             dragging = true;
             tap = true;
         }
-
         var map = L.map(mapId, {
             center: mapCenter,
             zoom: 13,
@@ -280,7 +246,6 @@ function map() {
             tap: tap,
             scrollWheelZoom: false
         });
-
         var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
             attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             subdomains: 'abcd',
@@ -288,25 +253,19 @@ function map() {
             maxZoom: 20,
             ext: 'png'
         });
-
         Stamen_TonerLite.addTo(map);
-
         map.once('focus', function () {
             map.scrollWheelZoom.enable();
         });
-
         if (mapMarker) {
             var marker = L.marker(mapCenter, {
                 icon: icon
             }).addTo(map);
-
             marker.bindPopup("<div class='p-4'><h5>Hello, my location is here:</h5><p>Belarus. Minsk, 220028, Aerodromnaya st. 32 - 415</p></div>", {
                 minwidth: 200,
                 maxWidth: 600,
                 className: 'map-custom-popup'
-            })
-
+            });
         }
     }
-
 }
