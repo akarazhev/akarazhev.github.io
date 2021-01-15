@@ -215,7 +215,14 @@ function send() {
                name + ' ' + surname + 
                '%0D%0AE-mail: ' + email;
     body += phone.length > 0 ? '%0D%0APhone: ' + phone : '';
+
     window.open("mailto:karazhev@gmail.com?subject=" + subject + "&body=" + body);
+    
+    $("input[name=name]").val('');
+    $("input[name=surname]").val('');
+    $("input[name=email]").val('');
+    $("input[name=phone]").val('');
+    $("textarea[name=message]").val('');
 }
 
 /* =========================================
