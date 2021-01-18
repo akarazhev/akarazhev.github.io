@@ -1,1 +1,12 @@
 /* your styles go here */
+footer.main-footer p.social a.linkedin {
+  background-color: #0e76a8;
+}
+
+footer.main-footer p.social a.github {
+    background-color: #333;
+}
+
+footer.main-footer p.social a.telegram {
+    background-color: #0088cc;
+}
