@@ -230,7 +230,7 @@ function send() {
  *  =======================================*/
 function map() {
     var mapId = 'map',
-        mapCenter = [53.87143507519677, 27.555582045711407],
+        mapCenter = [53.874118086409624, 27.530217469473044],
         mapMarker = true;
     if ($('#' + mapId).length > 0) {
         var icon = L.icon({
@@ -267,7 +267,7 @@ function map() {
             var marker = L.marker(mapCenter, {
                 icon: icon
             }).addTo(map);
-            marker.bindPopup("<div class='p-4'><h5>Hello, my location is here:</h5><p>Belarus. Minsk, 220028, Aerodromnaya st. 32 - 415</p></div>", {
+            marker.bindPopup("<div class='p-4'><h5>Hello, my location is here:</h5><p>Belarus. Minsk, 220039, Korotkevich st. 11 - 12</p></div>", {
                 minwidth: 200,
                 maxWidth: 600,
                 className: 'map-custom-popup'
