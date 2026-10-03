@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andrey Karazhev</title>
-<meta name="description" content="Andrey Karazhev — data engineering. Data in motion between systems: parsing, transfer, reconciliation and the analytics on top, published with the data and the code behind them.">
+<meta name="description" content="Andrey Karazhev — data integration and reconciliation: why data between systems quietly goes wrong. Fixes and diagnoses published with the code and the data behind them.">
 <link rel="canonical" href="https://akarazhev.github.io/">
 <style>
   :root { color-scheme: light dark; }
@@ -29,7 +29,7 @@
 <body>
 
   <h1>Andrey Karazhev</h1>
-  <p class="role">Data engineering — and why data between systems quietly goes wrong</p>
+  <p class="role">Data integration and reconciliation — and why data between systems quietly goes wrong</p>
 
   <p>I work on data in motion: parsing and normalising what arrives from other
   systems, moving it, reconciling what does not match, and the analytics built on
@@ -43,8 +43,13 @@
   being a technical detail and becomes money — charged twice, never invoiced, or
   never counted at all.</p>
 
-  <p>In the Odoo Community Association I proposed a fix that keeps queued jobs
-  from losing the name of the method they were asked to run
+  <p>In public: a fix to NATS server that its maintainers merged the day I
+  opened it (<a href="https://github.com/nats-io/nats-server/pull/8671">#8671</a>);
+  a diagnosis in numaflow that led the team to revisit a design decision and
+  merge my documentation fix
+  (<a href="https://github.com/numaproj/numaflow/pull/3660">#3660</a>); and in the
+  Odoo Community Association, a fix that keeps queued jobs from losing the name
+  of the method they were asked to run
   (<a href="https://github.com/OCA/queue/pull/998">OCA/queue#998</a>).</p>
 
   <p><a href="https://github.com/OCA/queue/pull/998"><img src="oca-contributor.png" alt="OCA Contributor" width="120" height="59"></a></p>
