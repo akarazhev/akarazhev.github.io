@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andrey Karazhev</title>
-<meta name="description" content="Andrey Karazhev — data integration and reconciliation: why data between systems quietly goes wrong. Fixes and diagnoses published with the code and the data behind them.">
+<meta name="description" content="Andrey Karazhev — data integration and reconciliation, including data written by automation and AI: why it quietly goes wrong. Fixes and diagnoses published with the code and the data behind them.">
 <link rel="canonical" href="https://akarazhev.github.io/">
 <style>
   :root { color-scheme: light dark; }
@@ -29,11 +29,11 @@
 <body>
 
   <h1>Andrey Karazhev</h1>
-  <p class="role">Data integration and reconciliation — and why data between systems quietly goes wrong</p>
+  <p class="role">Data integration and reconciliation, including data written by automation and AI</p>
 
   <p>I work on data in motion: parsing and normalising what arrives from other
   systems, moving it, reconciling what does not match, and the analytics built on
-  top. Java, Python, Go. Nineteen years of backend and distributed systems.</p>
+  top. Java, Python, Go, SQL. Nineteen years of backend and data systems.</p>
 
   <p>Most of what I publish is about the quiet failures — duplicates, gaps, stale
   values, order and reprocessing. They produce no errors in the log and surface
@@ -43,6 +43,11 @@
   being a technical detail and becomes money — charged twice, never invoiced, or
   never counted at all.</p>
 
+  <p>Automation and AI now write into accounting systems too: invoices read from
+  PDFs, documents recognised from scans, agents that post entries on their own.
+  They make the same quiet mistakes, only faster — so I check what they actually
+  wrote.</p>
+
   <p>In public: a fix to NATS server that its maintainers merged the day I
   opened it (<a href="https://github.com/nats-io/nats-server/pull/8671">#8671</a>);
   a diagnosis in numaflow that led the team to revisit a design decision and
@@ -50,7 +55,9 @@
   (<a href="https://github.com/numaproj/numaflow/pull/3660">#3660</a>); and in the
   Odoo Community Association, a fix that keeps queued jobs from losing the name
   of the method they were asked to run
-  (<a href="https://github.com/OCA/queue/pull/998">OCA/queue#998</a>).</p>
+  (<a href="https://github.com/OCA/queue/pull/998">OCA/queue#998</a>), and a check
+  of its PDF invoice import, which silently dropped some amounts
+  (<a href="https://github.com/OCA/edi/issues/1423#issuecomment-5995142801">OCA/edi#1423</a>).</p>
 
   <p><a href="https://github.com/OCA/queue/pull/998"><img src="oca-contributor.png" alt="OCA Contributor" width="120" height="59"></a></p>
 
