@@ -24,6 +24,7 @@
   li { margin: 0 0 .5rem; }
   .muted { color: #9b9b96; }
   img { display: block; }
+  ul.public { margin: 0 0 1.1rem; }
 </style>
 </head>
 <body>
@@ -31,46 +32,30 @@
   <h1>Andrey Karazhev</h1>
   <p class="role">Data integration, migration and data quality</p>
 
-  <p>I find why numbers between systems don't match. I work on data in motion:
-  parsing and normalising what arrives from other systems, moving and migrating
-  it, reconciling what does not match, and checking after each load that counts
-  and sums still agree with the source. SQL, Python, Java, Go. Nineteen years of
-  backend and data systems.</p>
+  <p>I work on data that moves between systems. Most of my time goes into finding
+  why numbers stop matching after a load, an import or a migration, and into
+  checks that catch it the next time. Nineteen years of backend and data systems;
+  SQL, Python, Java, Go.</p>
 
-  <p>Most of what I publish is about the quiet failures — duplicates, gaps, stale
-  values, order and reprocessing. They produce no errors in the log and surface
-  weeks later as a wrong number.</p>
+  <p>The failures I write about are quiet: duplicates, gaps, stale values, order
+  and reprocessing. They leave no errors in the log and show up weeks later as a
+  wrong number. Where those numbers feed invoices, settlements or stock, they
+  become money: charged twice, never invoiced or never counted.</p>
 
-  <p>Where those numbers feed invoices, settlements or stock, the failure stops
-  being a technical detail and becomes money — charged twice, never invoiced, or
-  never counted at all.</p>
-
-  <p>In public: a <a href="https://reconciliation.minihub.app">reconciliation
-  demo</a> with planted discrepancies, walked through in
-  <a href="https://dev.to/akarazhev/why-stripe-payouts-dont-match-your-books-3aoa">a
-  write-up</a>; a fix to NATS server that its maintainers merged the day I
-  opened it (<a href="https://github.com/nats-io/nats-server/pull/8671">#8671</a>);
-  a diagnosis in numaflow that led the team to revisit a design decision and
-  merge my documentation fix
-  (<a href="https://github.com/numaproj/numaflow/pull/3660">#3660</a>); in the
-  Odoo Community Association, a fix that keeps queued jobs from losing the name
-  of the method they were asked to run
-  (<a href="https://github.com/OCA/queue/pull/998">OCA/queue#998</a>) and a check
-  of its PDF invoice import, which silently dropped some amounts
-  (<a href="https://github.com/OCA/edi/issues/1423#issuecomment-5995142801">OCA/edi#1423</a>);
-  and a fix to factur-x, the Python library for Factur-X e-invoices, merged an
-  hour after I opened it
-  (<a href="https://github.com/akretion/factur-x/pull/96">akretion/factur-x#96</a>).</p>
+  <p>In public:</p>
+  <ul class="public">
+    <li>a <a href="https://reconciliation.minihub.app">reconciliation demo</a> with planted discrepancies, and <a href="https://dev.to/akarazhev/why-stripe-payouts-dont-match-your-books-3aoa">a write-up</a> about it;</li>
+    <li>a fix to NATS server, merged the day I opened it (<a href="https://github.com/nats-io/nats-server/pull/8671">#8671</a>);</li>
+    <li>a numaflow diagnosis that ended in a docs fix (<a href="https://github.com/numaproj/numaflow/pull/3660">#3660</a>);</li>
+    <li>in Odoo's OCA, a fix for queued jobs (<a href="https://github.com/OCA/queue/pull/998">OCA/queue#998</a>) and a check of the PDF invoice import, which silently dropped some amounts (<a href="https://github.com/OCA/edi/issues/1423#issuecomment-5995142801">OCA/edi#1423</a>);</li>
+    <li>a fix to factur-x, merged within about an hour (<a href="https://github.com/akretion/factur-x/pull/96">akretion/factur-x#96</a>).</li>
+  </ul>
 
   <p><a href="https://github.com/OCA/queue/pull/998"><img src="oca-contributor.png" alt="OCA Contributor" width="120" height="59"></a></p>
 
   <p>Earlier, as an independent contractor, I worked directly for telecom companies
-  in Slovenia — Iskratel and RC IKT — remotely, with acceptance testing
-  on the client's own equipment.</p>
-
-  <p>When I publish a number, the code that produced it and the data it ran on go
-  out with it — a disagreement should be with a rule you can read, not a figure
-  you have to believe.</p>
+  in Slovenia, Iskratel and RC IKT, remotely, with acceptance testing on the
+  client's own equipment.</p>
 
   <ul>
     <li><a href="https://minihub.app">minihub.app</a> <span class="muted">— published work</span></li>
