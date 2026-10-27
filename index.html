@@ -44,11 +44,13 @@
 
   <p>In public:</p>
   <ul class="public">
-    <li>a <a href="https://reconciliation.minihub.app">reconciliation demo</a> with planted discrepancies, and <a href="https://dev.to/akarazhev/why-stripe-payouts-dont-match-your-books-3aoa">a write-up</a> about it;</li>
-    <li>a fix to NATS server, merged the day I opened it (<a href="https://github.com/nats-io/nats-server/pull/8671">#8671</a>);</li>
+    <li>a <a href="https://reconciliation.minihub.app">reconciliation demo</a> with planted discrepancies, and write-ups about <a href="https://dev.to/akarazhev/why-stripe-payouts-dont-match-your-books-3aoa">one month</a> and <a href="https://dev.to/akarazhev/stripe-reconciliation-carrying-september-into-october-2743">what carries into the next</a>;</li>
+    <li>two fixes to NATS server, both merged: <a href="https://github.com/nats-io/nats-server/pull/8671">#8671</a> the day I opened it, and <a href="https://github.com/nats-io/nats-server/pull/8691">#8691</a>;</li>
+    <li>a fix to Apache Airflow's Snowflake hook, which lost its transaction when session parameters were set, merged the day I opened it (<a href="https://github.com/apache/airflow/pull/75425">apache/airflow#75425</a>);</li>
     <li>a numaflow diagnosis that ended in a docs fix (<a href="https://github.com/numaproj/numaflow/pull/3660">#3660</a>);</li>
     <li>in Odoo's OCA, a fix for queued jobs (<a href="https://github.com/OCA/queue/pull/998">OCA/queue#998</a>) and a check of the PDF invoice import, which silently dropped some amounts (<a href="https://github.com/OCA/edi/issues/1423#issuecomment-5995142801">OCA/edi#1423</a>);</li>
-    <li>a fix to factur-x, merged within about an hour (<a href="https://github.com/akretion/factur-x/pull/96">akretion/factur-x#96</a>).</li>
+    <li>a fix to factur-x, merged within about an hour (<a href="https://github.com/akretion/factur-x/pull/96">akretion/factur-x#96</a>);</li>
+    <li>in ERPNext, a check that let an asset be submitted at any value, with the fix on a branch (<a href="https://github.com/frappe/erpnext/issues/62390">frappe/erpnext#62390</a>).</li>
   </ul>
 
   <p><a href="https://github.com/OCA/queue/pull/998"><img src="oca-contributor.png" alt="OCA Contributor" width="120" height="59"></a></p>
