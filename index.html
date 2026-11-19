@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Andrey Karazhev</title>
-<meta name="description" content="Andrey Karazhev — data integration, migration and data quality: why numbers between systems don't match. Fixes and diagnoses published with the code and the data behind them.">
+<meta name="description" content="Andrey Karazhev, software engineer and technical leader: data integration, migration and data quality. Fixes and diagnoses published with the code and the data behind them.">
 <link rel="canonical" href="https://akarazhev.github.io/">
 <style>
   :root { color-scheme: light dark; }
@@ -30,12 +30,13 @@
 <body>
 
   <h1>Andrey Karazhev</h1>
-  <p class="role">Data integration, migration and data quality</p>
+  <p class="role">Engineering Leader · Software &amp; Data Integration Architect</p>
 
-  <p>I work on data that moves between systems. Most of my time goes into finding
-  why numbers stop matching after a load, an import or a migration, and into
-  checks that catch it the next time. Nineteen years of backend and data systems;
-  SQL, Python, Java, Go.</p>
+  <p>Software engineer and technical leader with 19 years in backend systems,
+  software architecture, data integration, migration and data quality. I lead a
+  team of five engineers. I work in Java, Python, SQL and Go. Most of my work sits
+  where systems exchange data: integrations, migrations, distributed systems, and
+  the reconciliation that shows whether the numbers on both sides still match.</p>
 
   <p>The failures I write about are quiet: duplicates, gaps, stale values, order
   and reprocessing. They leave no errors in the log and show up weeks later as a
@@ -45,6 +46,7 @@
   <p>In public:</p>
   <ul class="public">
     <li>a <a href="https://reconciliation.minihub.app">reconciliation demo</a> with planted discrepancies, and write-ups about <a href="https://dev.to/akarazhev/why-stripe-payouts-dont-match-your-books-3aoa">one month</a> and <a href="https://dev.to/akarazhev/stripe-reconciliation-carrying-september-into-october-2743">what carries into the next</a>;</li>
+    <li>in NautilusTrader, OKX history requests that now say whether the exchange returned the whole window, so a data catalog stores only complete ones (<a href="https://github.com/nautechsystems/nautilus_trader/pull/5501">#5501</a>), and the guide section that documents it (<a href="https://github.com/nautechsystems/nautilus_trader/pull/5533">#5533</a>), both merged;</li>
     <li>two fixes to NATS server, both merged: <a href="https://github.com/nats-io/nats-server/pull/8671">#8671</a> the day I opened it, and <a href="https://github.com/nats-io/nats-server/pull/8691">#8691</a>;</li>
     <li>a fix to Apache Airflow's Snowflake hook, which lost its transaction when session parameters were set, merged the day I opened it (<a href="https://github.com/apache/airflow/pull/75425">apache/airflow#75425</a>);</li>
     <li>a numaflow diagnosis that ended in a docs fix (<a href="https://github.com/numaproj/numaflow/pull/3660">#3660</a>);</li>
